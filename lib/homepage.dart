@@ -9,9 +9,37 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+  final List<Widget> _pages = [
+    const Center(
+      child: Text(
+        'homepage',
+        style: TextStyle(fontSize: 50),
+      ),
+    ),
+    const Center(
+      child: Text(
+        'likes',
+        style: TextStyle(fontSize: 50),
+      ),
+    ),
+    const Center(
+      child: Text(
+        'search',
+        style: TextStyle(fontSize: 50),
+      ),
+    ),
+    const Center(
+      child: Text(
+        'settings',
+        style: TextStyle(fontSize: 50),
+      ),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
         color: Colors.black,
         child: Padding(
@@ -22,8 +50,7 @@ class _HomePageState extends State<HomePage> {
             activeColor: Colors.white,
             tabBackgroundColor: Colors.grey.shade800,
             gap: 8,
-            onTabChange: (index) {},
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             tabs: const [
               GButton(
                 icon: Icons.home,
@@ -42,6 +69,12 @@ class _HomePageState extends State<HomePage> {
                 text: 'Settings',
               ),
             ],
+            selectedIndex: _selectedIndex,
+            onTabChange: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
           ),
         ),
       ),
