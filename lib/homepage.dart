@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:letscode/pages/first_page.dart';
+import 'package:letscode/pages/fourth_page.dart';
 import 'package:letscode/pages/second_page.dart';
+import 'package:letscode/pages/sixth_page.dart';
+import 'package:letscode/pages/third_page.dart';
+
+import 'pages/fitfth_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -91,6 +96,62 @@ class _HomePageState extends State<HomePage> {
                   // navigate to a different page
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => SecondPage()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.abc),
+                title: const Text(
+                  'Page 3',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                onTap: () {
+                  // navigate to a different page
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ThirdPage()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.abc),
+                title: const Text(
+                  'Page 4',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                onTap: () {
+                  // navigate to a different page
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FourthPage()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.abc),
+                title: const Text(
+                  'Page 5 (TIMER)',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                onTap: () {
+                  // navigate to a different page
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FifthPage()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.abc),
+                title: const Text(
+                  'Page 6 (PAGEVIEW)',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                onTap: () {
+                  // navigate to a different page
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SixthPage()));
                 },
               ),
             ],

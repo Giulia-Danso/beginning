@@ -14,9 +14,9 @@ class SecondPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('TAB BAR'),
         ),
-        body: const Column(
+        body: Column(
           children: [
-            TabBar(
+            const TabBar(
               tabs: [
                 Tab(
                   icon: Icon(
@@ -45,10 +45,10 @@ class SecondPage extends StatelessWidget {
                   FirstTab(),
 
                   //2nd Tab
-                  SecondTab(),
+                  const SecondTab(),
 
                   //3rd Tab
-                  ThirdTab(),
+                  const ThirdTab(),
                 ],
               ),
             ),
